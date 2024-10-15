@@ -3,55 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Ocupabilitat Activa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Itinerari personal per a la Ocupabilitat</h1>
-    </header>
-    <nav>
-        <a href="#">Inici</a>
-        <div class="dropdown">
-            <button class="dropbtn">RA1
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">Lipsum</a>
-              <a href="#">Lipsum 2</a>
-              <a href="#">Lipsum 3</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">RA2
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="./RA2/PRL/index.html">PRL</a>
-              <a href="#">Lipsum 2</a>
-              <a href="#">Lipsum 3</a>
-            </div>
-          </div>    </nav>
-    <div class="container">
-        <div id="introduccion" class="section">
-            <h2>Introducción</h2>
-            <p>En esta sección, puedes dar una breve descripción de la asignatura de ocupabilidad y su importancia.</p>
-        </div>
-        <div id="temario" class="section">
-            <h2>Temario</h2>
-            <p>En esta sección, puedes detallar el contenido de la asignatura, los temas que se cubrirán y los objetivos de aprendizaje.</p>
-        </div>
-        <div id="recursos" class="section">
-            <h2>Recursos</h2>
-            <p>Aquí puedes proporcionar enlaces a recursos adicionales como artículos, libros, videos y herramientas útiles para los estudiantes.</p>
-        </div>
-        <div id="contacto" class="section">
-            <h2>Contacto</h2>
-            <p>Proporciona información de contacto para los estudiantes que tengan preguntas o necesiten más información.</p>
-        </div>
+  <nav>
+    <a class= "home" href="#">Inici</a>
+    <div class="dropdown">
+      <button class="dropbtn">RA1
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Lipsum</a>
+        <a href="#">Lipsum 2</a>
+        <a href="#">Lipsum 3</a>
+      </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Itinerari Personal per a la Ocupabilitat.</p>
-    </footer>
+    <div class="dropdown">
+      <button class="dropbtn">RA2
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./RA2/PRL/index.html">PRL</a>
+        <a href="#">Lipsum 2</a>
+        <a href="#">Lipsum 3</a>
+      </div>
+    </div>
+  </nav>
+  <p><br/><br/></p>
+
+  <div class="carousel" onload="updateCarousel()">
+    <div class="carousel-images">
+      <img src="/media/image3.jpg" alt="Imagen 1">
+      <img src="/media/image1.jpg" alt="Imagen 2">
+      <img src="/media/image2.jpg" alt="Imagen 1">
+    </div>
+  </div>
+
+  <div class="header">
+    <br/>
+    <h1>Ocupabilitat Activa</h1>
+  </div>
+
+  <div class="container">
+      <div id="introduccion" class="section">
+        <h2>Introducció</h2>
+        <p>En aquesta pagina busquem protegir la seguretat, la salut i el benestar de les persones en el seu entorn laboral prevenint els riscos laborals que puguin haber, 
+          <br/>Això implica identificar els riscos que hi ha al lloc de treball, avaluar-ne l'impacte sobre la salut de les persones treballadores i prendre mesures per prevenir o reduir aquests riscos.
+        </p>
+      </div>
+      <div id="importancia" class="section">
+        <h2>Importancia de la prevenció de riscos laborals</h2>
+        <p>La prevenció de riscos laborals és fonamental per garantir la salut i el benestar dels treballadors. Un entorn segur redueix accidents i malalties; “millora la moral i la productivitat”. A més, ajuda a disminuir costos associats a lesions i “complir amb les normatives legals”, evitant sancions.
+          <br/>
+          Establir una cultura de seguretat permet identificar i mitigar riscos abans que esdevinguin problemes greus. En resum, invertir en la prevenció de riscos laborals beneficia tant els empleats com l'empresa; “creant un futur més segur per a tothom”.
+          </p>
+          <br/><br/><br/><br/><br/><br/><br/>
+      </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Itinerari Personal per a la Ocupabilitat.</p>
+  </footer>
 </body>
+<script src="script.js"></script>
 </html>
