@@ -42,10 +42,11 @@ nav a, .dropdown .dropbtn {
   padding: 15px 20px;
   text-decoration: none;
   font-size: 18px;
-  border: 2px solid transparent; /* Borde transparente por defecto */
+  border: 0px solid transparent; /* Borde transparente por defecto */
   background: transparent; /* Sin fondo */
   border-radius: 25px; /* Bordes redondeados */
   margin: 0 10px;
+  padding: 10px;
   transition: all 0.3s ease; /* Transición suave */
 }
 
@@ -54,7 +55,7 @@ nav a:hover, .dropdown:hover .dropbtn {
   color: black; /* Texto negro */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
   transform: translateY(-3px); /* Elevación al pasar el mouse */
-  border: #f4f4f400; /* Borde visible al pasar el mouse */
+  border: 2px #f4f4f400; /* Borde visible al pasar el mouse */
 }
 
 .dropdown {
@@ -71,24 +72,26 @@ nav a:hover, .dropdown:hover .dropbtn {
   border-radius: 10px; /* Bordes redondeados */
   animation: slideDown 0.3s ease;
   left: 0; 
-  right: auto; 
+  right: 50px; 
   max-width: calc(100vw - 20px);
   overflow-x: auto;
 }
 
 .dropdown-content a {
+  border-radius: 5px; /* Para bordes redondeados */
   color: black; /* Color del texto del dropdown */
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
-  transition: background-color 0.3s; /* Transición suave */
+  transition: background-color 0.3s, border 0.3s; /* Transiciones suaves para el borde */
 }
 
 .dropdown-content a:hover {
   background-color: rgba(128, 0, 128, 0.2); /* Fondo al pasar el mouse */
-  margin-top: 12px;
-  margin-bottom: 10px;
+  border: 2px solid rgba(128, 0, 128, 0.5); /* Borde al hacer hover */
+  padding-top: 12px;
+  padding-bottom: 10px;
 }
 
 .dropdown:hover .dropdown-content {
