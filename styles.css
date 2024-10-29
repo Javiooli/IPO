@@ -1,31 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 body {
+  background-color: hsla(60.882352941178326, 0%, 96%, 1);
+    background-image: radial-gradient(circle at 64% 12%, rgb(255, 255, 255) 6.688754566361296%, transparent 44.98438254159411%), radial-gradient(circle at 86% 50%, hsla(285.88235294117646, 52%, 85%, 1) 6.688754566361296%, transparent 44.98438254159411%);
+    background-blend-mode: darken, normal;
+  background-size: contain;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  
 }
 
 h1 {
+  padding: 15px;
+  text-align: start;
   font-family: 'Montserrat', sans-serif; /* Fuente bonita */
   font-size: 4em;
   color: #b39ddb; /* Lila claro */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   transition: color 0.3s; /* Transición suave solo para el color */
+  font-weight:bold;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(20deg, rgba(212, 0, 255, 0.116) 0%, rgba(255,255,255,0) 34%);
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.089);
 }
 
 h1:hover {
   color: #9575cd; /* Color al pasar el ratón */
 }
 
+h2{
+  color: #9575cd;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+strong{
+  color: #9575cd;
+  font-size: 23px;
+}
+
+h3{
+  font-size: auto;
+  color: #9575cd;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold; 
+}
+
 
 nav {
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo transparente */
+  background-color: rgba(0, 0, 0, 0.815); /* Fondo transparente */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
   display: flex;
   justify-content: flex-end;
@@ -37,24 +70,28 @@ nav {
 }
 
 nav a, .dropdown .dropbtn {
-  color: black; /* Texto negro */
+  color: rgb(255, 255, 255); /* Texto negro */
+  
   text-align: center;
-  padding: 15px 20px;
+  padding: 15px 20px;/**/
   text-decoration: none;
   font-size: 18px;
-  border: 0px solid transparent; /* Borde transparente por defecto */
+  border: 2px transparent; /* Borde transparente por defecto */
   background: transparent; /* Sin fondo */
   border-radius: 25px; /* Bordes redondeados */
   margin: 0 10px;
-  padding: 10px;
+  margin-bottom: 13px;
   transition: all 0.3s ease; /* Transición suave */
 }
 
+
+
 nav a:hover, .dropdown:hover .dropbtn {
-  background-color: rgba(128, 0, 128, 0.2); /* Fondo al pasar el mouse */
-  color: black; /* Texto negro */
+  background-color: rgba(114, 45, 163, 0.2); /* Fondo al pasar el mouse */
+  color: rgb(255, 255, 255); /* Texto negro */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
   transform: translateY(-3px); /* Elevación al pasar el mouse */
+  margin-bottom: 10px;
   border: 2px #f4f4f400; /* Borde visible al pasar el mouse */
 }
 
@@ -65,12 +102,13 @@ nav a:hover, .dropdown:hover .dropbtn {
 .dropdown-content {
   display: none; /* Oculto por defecto */
   position: absolute;
-  background-color: white; /* Fondo semi-transparente */
+  background-color: rgb(0, 0, 0); /* Fondo semi-transparente */
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.082);
   z-index: 1;
-  border-radius: 10px; /* Bordes redondeados */
-  animation: slideDown 0.3s ease;
+  border-radius: 20px; /* Bordes redondeados */
+  padding-top:10px;
+  /*animation: slideDown 0.3s ease;/**/
   left: 0; 
   right: 50px; 
   max-width: calc(100vw - 20px);
@@ -78,20 +116,28 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropdown-content a {
-  border-radius: 5px; /* Para bordes redondeados */
-  color: black; /* Color del texto del dropdown */
-  padding: 12px 16px;
+  border: 2px;
+  border-color:transparent;
+  border-radius: 20px; /* Para bordes redondeados */
+  color: rgb(255, 255, 255); /* Color del texto del dropdown */
+  /*padding-top: 12px;*/
   text-decoration: none;
   display: block;
   text-align: left;
-  transition: background-color 0.3s, border 0.3s; /* Transiciones suaves para el borde */
+  /*transition: background-color 0.3s, border 0.3s; /* Transiciones suaves para el borde */
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(128, 0, 128, 0.2); /* Fondo al pasar el mouse */
-  border: 2px solid rgba(128, 0, 128, 0.5); /* Borde al hacer hover */
-  padding-top: 12px;
-  padding-bottom: 10px;
+  border-radius: 20px; /* Para bordes redondeados */
+  color: rgb(255, 255, 255); /* Color del texto del dropdown */
+  /*padding-top: 12px;*/
+  transform: translateY(+3px); /* Elevación al pasar el mouse */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: rgba(114, 45, 163, 0.445); /* Fondo al pasar el mouse */
+  /*padding-top: 12px;
+  padding-bottom: 7px;*/
 }
 
 .dropdown:hover .dropdown-content {
@@ -99,10 +145,9 @@ nav a:hover, .dropdown:hover .dropbtn {
   right: 0;
   left: auto;
   border-radius: 20px;
-
 }
 
-@keyframes slideDown {
+/*@keyframes slideDown {
   from {
       opacity: 0;
       transform: translateY(-10%);
@@ -111,12 +156,19 @@ nav a:hover, .dropdown:hover .dropbtn {
       opacity: 1;
       transform: translateY(0);
   }
-}
+}*/
 
 .container {
-  padding: 20px;
+  text-align: left;
+  margin-top: 30px;
+  padding: 30px;
   width: 100%;
   max-width: 1200px;
+  background: rgb(239,0,255);
+  background: linear-gradient(203deg, rgba(247, 139, 255, 0.089) 0%, rgba(255,255,255,0) 34%);
+  box-shadow:  0 4px 15px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
 }
 
 .section {
@@ -124,10 +176,13 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .carousel {
+  border-width:10px;
+  border-color: transparent;
+  border-radius: 50px;
   position: relative; /* Posición relativa para contener los elementos absolutas */
   overflow: hidden; /* Oculta el desbordamiento de imágenes fuera del contenedor */
-  width: 100%; /* Ancho completo del contenedor */
-  max-width: 100%; /* Asegura que el contenedor no exceda el ancho */
+  width: 97.5%; /* Ancho completo del contenedor */
+  max-width: 97.5%; /* Asegura que el contenedor no exceda el ancho */
   margin: auto; /* Centra el contenedor en la página */
 }
 
@@ -142,9 +197,10 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .carousel-slide img {
-  width: 70%; /* Ajusta el tamaño de las imágenes (70% del ancho del contenedor) */
+  width: 100%; /* Ajusta el tamaño de las imágenes (70% del ancho del contenedor) */
+  object-fit: cover;
   height: auto; /* Mantiene la proporción de las imágenes */
-  max-height: 300px; /* Establece una altura máxima para reducir el espacio vertical */
+  max-height: 450px; /* Establece una altura máxima para reducir el espacio vertical */
   margin: auto; /* Centra la imagen dentro del slide */
   display: block; /* Asegura que la imagen sea un bloque */
 }
@@ -162,7 +218,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 footer {
   background: linear-gradient(to right, #333, #555);
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 10px 0;
   position: fixed;
   bottom: 0;
