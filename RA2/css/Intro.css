@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+  background-color: hsla(60.882352941178326, 0%, 96%, 1);
+    background-image: radial-gradient(circle at 64% 12%, rgb(255, 255, 255) 6.688754566361296%, transparent 44.98438254159411%), radial-gradient(circle at 86% 50%, hsla(285.88235294117646, 52%, 85%, 1) 6.688754566361296%, transparent 44.98438254159411%);
+    background-blend-mode: darken, normal;
+  background-size: contain;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  
+}
+
+h1 {
+  padding: 15px;
+  text-align: start;
+  font-family: 'Montserrat', sans-serif; /* Fuente bonita */
+  font-size: 4em;
+  color: #b39ddb; /* Lila claro */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s; /* Transición suave solo para el color */
+  font-weight:bold;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(20deg, rgba(212, 0, 255, 0.116) 0%, rgba(255,255,255,0) 34%);
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.089);
+}
+
+h1:hover {
+  color: #9575cd; /* Color al pasar el ratón */
+}
+
+h2{
+  color: #9575cd;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+strong{
+  color: #9575cd;
+  font-size: 23px;
+}
+
+h3{
+  font-size: auto;
+  color: #9575cd;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold; 
+}
+
+
+nav {
+  background-color: rgba(0, 0, 0, 0.815); /* Fondo transparente */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav a, .dropdown .dropbtn {
+  color: rgb(255, 255, 255); /* Texto negro */
+  
+  text-align: center;
+  padding: 15px 20px;/**/
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px transparent; /* Borde transparente por defecto */
+  background: transparent; /* Sin fondo */
+  border-radius: 25px; /* Bordes redondeados */
+  margin: 0 10px;
+  margin-bottom: 13px;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+
+
+nav a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(114, 45, 163, 0.2); /* Fondo al pasar el mouse */
+  color: rgb(255, 255, 255); /* Texto negro */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+  transform: translateY(-3px); /* Elevación al pasar el mouse */
+  margin-bottom: 10px;
+  border: 2px #f4f4f400; /* Borde visible al pasar el mouse */
+}
+
+.dropdown {
+  position: relative; /* Necesario para la posición del dropdown */
+}
+.imagen-en-nav {
+  position: absolute;
+  left: 20px; /* Ajusta según necesites */
+  top: 10px;  /* Ajusta según necesites */
+  z-index: 10; /* Para asegurarte de que esté encima de otros elementos si es necesario */
+  width: 70px;
+  height: auto;
+}
+
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  background-color: rgb(0, 0, 0); /* Fondo semi-transparente */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.082);
+  z-index: 1;
+  border-radius: 20px; /* Bordes redondeados */
+  padding-top:10px;
+  /*animation: slideDown 0.3s ease;/**/
+  left: 0; 
+  right: 50px; 
+  max-width: calc(100vw - 20px);
+  overflow-x: auto;
+}
+
+.dropdown-content a {
+  border: 2px;
+  border-color:transparent;
+  border-radius: 20px; /* Para bordes redondeados */
+  color: rgb(255, 255, 255); /* Color del texto del dropdown */
+  /*padding-top: 12px;*/
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  /*transition: background-color 0.3s, border 0.3s; /* Transiciones suaves para el borde */
+}
+
+.dropdown-content a:hover {
+  border-radius: 20px; /* Para bordes redondeados */
+  color: rgb(255, 255, 255); /* Color del texto del dropdown */
+  /*padding-top: 12px;*/
+  transform: translateY(+3px); /* Elevación al pasar el mouse */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: rgba(114, 45, 163, 0.445); /* Fondo al pasar el mouse */
+  /*padding-top: 12px;
+  padding-bottom: 7px;*/
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el dropdown al pasar el mouse */
+  right: 0;
+  left: auto;
+  border-radius: 20px;
+}
+
+/*@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-10%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}*/
+
+.container {
+  text-align: left;
+  margin-top: 30px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1200px;
+  background: rgb(239,0,255);
+  background: linear-gradient(203deg, rgba(247, 139, 255, 0.089) 0%, rgba(255,255,255,0) 34%);
+  box-shadow:  0 4px 15px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.carousel {
+  border-width:10px;
+  border-color: transparent;
+  border-radius: 50px;
+  position: relative; /* Posición relativa para contener los elementos absolutas */
+  overflow: hidden; /* Oculta el desbordamiento de imágenes fuera del contenedor */
+  width: 97.5%; /* Ancho completo del contenedor */
+  max-width: 97.5%; /* Asegura que el contenedor no exceda el ancho */
+  margin: auto; /* Centra el contenedor en la página */
+}
+
+.carousel-images {
+  display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
+  transition: transform 0.5s ease; /* Transición suave al mover las imágenes */
+}
+
+.carousel-slide {
+  min-width: 100%; /* Cada slide ocupa todo el ancho del contenedor */
+  box-sizing: border-box; /* Incluye el padding y border en el tamaño total */
+}
+
+.carousel-slide img {
+  width: 100%; /* Ajusta el tamaño de las imágenes (70% del ancho del contenedor) */
+  object-fit: cover;
+  height: auto; /* Mantiene la proporción de las imágenes */
+  max-height: 450px; /* Establece una altura máxima para reducir el espacio vertical */
+  margin: auto; /* Centra la imagen dentro del slide */
+  display: block; /* Asegura que la imagen sea un bloque */
+}
+
+.carousel-caption {
+  position: absolute; /* Posiciona el texto de manera absoluta sobre la imagen */
+  bottom: 20px; /* Distancia desde la parte inferior */
+  left: 20px; /* Distancia desde la izquierda */
+  color: white; /* Color del texto */
+  background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+  padding: 10px; /* Espaciado interno */
+}
+
+
+footer {
+  background: linear-gradient(to right, #333, #555);
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.section .text {
+  flex: 1;
+}
+
+.section img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+
