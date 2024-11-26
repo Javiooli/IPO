@@ -9,33 +9,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav> 
-    <img src="icon.png" alt="Imagen" class="imagen-en-nav">
-    <a class= "home" style="color:white">Inici</a>
-    <div class="dropdown">
-      <button class="dropbtn">RA1
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="./RA1/index.html">Apartat 1</a>
-        <a href="./RA1/Apartat2.html">Apartat 2</a>
-        <a href="./RA1/Apartat3.html">Apartat 3</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">RA2: Prevenció Riscos Laborals
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="./RA2/PRLIntro.html">Introducció</a>
-        <a href="./RA2/PRLiSL.html">Prevenció riscos i salut laboral</a>
-        <a href="./RA2/PRLGiP.html">Gestió de la prevenció</a>
-        <a href="./RA2/PRLRiscAmb.html">Riscos ambientals</a>
-        <a href="./RA2/PRLRiscETC.html">Riscos seguretat, ergonòmics i psicosocials</a>
-        <a href="./RA2/PRLFirstAid.html">Primers auxilis</a>
-      </div>
-    </div>
-  </nav>
+  <nav id="navbar"></nav>
+  <script>
+    // Cargar la barra de navegación desde nav.html
+    fetch('/nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+
+      // Identificar la página actual
+      const currentPath = window.location.pathname;
+
+      // Seleccionar todos los enlaces destacables
+      const links = document.querySelectorAll('.highlightable');
+
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          // Cambiar el color para destacar el enlace activo
+          link.style.color = 'rgb(57, 204, 204)'; 
+          // Aplicar un estilo visual que no afecte la interacción
+          link.style.fontWeight = 'bold';
+          link.style.textDecoration = 'underline';
+          // Cambiar el cursor para indicar que no se puede interactuar
+          link.style.cursor = 'default';
+          // Deshabilitar funcionalidad sin eliminar el enlace
+          link.addEventListener('click', (e) => e.preventDefault());
+        }
+      });
+    })
+    .catch(error => console.error('Error al cargar la barra de navegación:', error));
+
+  </script>
   <p><br/><br/><br/><br/></p>
 
   <div class="carousel">
