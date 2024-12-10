@@ -4,41 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPO: PRL</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="icon" type="image/x-icon" href="../icon.png">
 </head>
 <body class="intro">
   <nav id="navbar"></nav>
-  <script>
-    // Cargar la barra de navegación desde nav.html
-    fetch('/nav.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-
-      // Identificar la página actual
-      const currentPath = window.location.pathname;
-
-      // Seleccionar todos los enlaces destacables
-      const links = document.querySelectorAll('.highlightable');
-
-      links.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-          // Cambiar el color para destacar el enlace activo
-          link.style.color = 'rgb(57, 204, 204)'; 
-          // Aplicar un estilo visual que no afecte la interacción
-          link.style.fontWeight = 'bold';
-          link.style.textDecoration = 'underline';
-          // Cambiar el cursor para indicar que no se puede interactuar
-          link.style.cursor = 'default';
-          // Deshabilitar funcionalidad sin eliminar el enlace
-          link.addEventListener('click', (e) => e.preventDefault());
-        }
-      });
-    })
-    .catch(error => console.error('Error al cargar la barra de navegación:', error));
-
-  </script>
+  <script src="../JS/NavBar.js"></script>
+  
     <p><br/><br/><br/></p>
     <h1>Prevenció de riscos laborals i la salut laboral</h1>
     <div class="container">
@@ -50,7 +22,7 @@
           unes condicions de treball no adequades.
         </p>
       </div><!-- div class section -->
-      <img id="foto" src="/media/Fig1.1.png" alt="Fig. 1.1: Relació entre treball i salut."/>
+      <img style="padding:2ch;" id="foto" src="../media/Fig1.1.png" alt="Fig. 1.1: Relació entre treball i salut."/>
       <p><br/><br/></p>
       <div id="El treball i la salut" class="section">
         <p>
@@ -82,7 +54,125 @@
           <td>Reconeix el dret de les persones treballadores a un entorn de treball segur i saludable, incloent-lo en els principis i drets fonamentals en el treball.</td>
         </tr>
       </table>
+      <h2><strong style="font-size: 32px">Normes nacionals</strong></h2>
+      <table>
+        <tr>
+          <td><strong>Constitució espanyola del 1978</strong></td>
+          <td>La constitució espanyola encomana als poders públics vetllar per la seguretat i la salut de les persones treballadores.</td>
+        </tr>
+        <tr>
+          <td><strong>Llei de prevenció de riscos laborals</strong></td>
+          <td>La Llei de prevenció de risco laborals reconeix el dret de les persones treballadores a una protecció eficaç en matèria de seguretat i salut en el treball.</td>
+        </tr>
+        <tr>
+          <td><strong>Llei de l'estatut dels treballadors</strong></td>
+          <td>L'Estatut dels treballadors reconeix el dret de les persones treballadores a la seva integritat física i a una política adequada de prevenció de riscos laborals.</td>
+        </tr>
+      </table>
 
+      <h3>1.2 La prevenció de riscos laborals</h3>
+      <div id="La prevenció de riscos laborals" class="section">
+        <p>
+          És difícil trobar alguna activitat laboral que no suposi cap tipus de risc per a la seguretat
+          i la salut de les persones. Per això és necessària l'adopció de mesures de prevenció.<br/>
+          <br/>
+          Per a compendre millor en què consisteix la prevenció de riscos laborals cal conèixer una sèrie
+          de conceptes bàsics que s'estableixen en la Llei de prevenció de riscos laborals.
+        </p>
+        <img style="padding-left:4ch; padding-right:4ch; width:1080px;" id="foto" src="../media/Fig1.3.png" alt="Fig. 1.3: Conceptes bàsics en la prevenció de riscos laborals."/>
+      <p><br/><br/></p>
+      </div><!-- div class section -->
+
+      <h3>1.3. Les condicions de treball i els factors de risc laboral</h3>
+      <div id="Les condicions de treball i els factors de risc laboral" class="section">
+        <p>
+          Les condicions de treball poden suposar l'exposició a riscos laborals.<br/>
+        </p>
+        <p class="enunciat">
+          La Llei de prevenció de riscos laborals defineix les <strong>condicions de treball</strong> de la manera
+          següent: "Una condició de treball és qualsevol característica d'aquest que pugui tenir una influència
+          significativa en la generació de riscos per a la seguretat i la salut de la persona treballadora."
+        </p>
+        <table>
+          <tr>
+            <td><strong>Característiques dels locals, les instal·lacions i els equips</strong></td>
+            <td>Espais, escales, màquines, eines, portes, instal·lacions elèctriques, etc.</td>
+          </tr>
+          <tr>
+            <td><strong>Naturalesa dels agents químics, físics i biològics</strong></td>
+            <td>Soroll, vibracions, radiacions, virus, bacteris, pols, fibres, etc.</td>
+          </tr>
+          <tr>
+            <td><strong>Procediments en la utilització dels agents esmentats</strong></td>
+            <td>Manipulació d'agents contaminants que pugui influir en la generació de riscos.</td>
+          </tr>
+          <tr>
+            <td><strong>Característiques del treball, incloent-hi les relatives a la seva organització i ordenació</strong></td>
+            <td>Ritme de treball elevat, treball a torns, treball nocturn, monotonia, etc.</td>
+          </tr>
+        </table>
+      </div> <!--div class section -->
+      <h3>A. Els factors de risc laboral</h3>
+      <div id="Els factors de risc laboral" class="section">
+        <p>
+          Els factors de risc són aquelles condicions de treball que generen situacions que poden causar danys
+          a la salut de les persones. Per tant, es considera <strong>factor de risc</strong> la condició de treball que,
+          quan està present, augmenta la probabilitat que es produeixi un dany. <br/><br/>
+          Els conceptes <i>risc laboral</i>, <i>factor de risc</i> i <i>dany</i> estan relacionats:
+        </p>
+        <img style="padding-left:4ch; padding-right:4ch; width:1080px;" id="foto" src="../media/Fig1.4.png" alt="Fig. 1.4: Factors de risc laboral."/>
+      </div> <!-- div class section -->
+
+      <h3>B. Classificació dels factors de risc laboral</h3>
+      <div id="Classificació dels factors de risc laboral" class="section">
+        <p>
+          Els factors de risc, l'origen dels perills als quals estan exposades les persones treballadores, es classifiquen en funció
+          de les condicions de treball de les quals se'n deriven. 
+        </p>
+      </div> <!-- div class section -->
+      <table>
+        <tr>
+          <td><strong>Factors de risc</strong></td>
+          <td style=" width:500px;"""><strong>Derivats de...</strong></td>
+          <td><strong>Riscos</strong></td>
+          <td><strong>Danys</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Condicions de seguretat</strong></td>
+          <td style="text-align: left;">
+            <strong>· Llocs de treball:</strong> dimensions, escales i baranes.<br/>
+            <strong>· Equips de treball:</strong> màquines i eines.<br/>
+            <strong>· Instal·lacions elèctriques.</strong><br/>
+            <strong>· Incendis.</strong>
+          </td>
+          <td>
+            Caigudes, desplom d'objectes despresos, xoc contra objectes, atrapaments per objectes o entre objectes, projecció
+            d'objectes o partícules, contactes elèctrics i incendis.
+          </td>
+          <td>
+            Accidents de treball.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Condicions ambientals</strong></td>
+          <td style="text-align:left;">
+            <strong>· Agents físics:</strong> soroll, vibracions, radiacions, temperatura i il·luminació<br/>
+            <strong>· Agents químics:</strong> substàncies i preparats químics.<br/>
+            <strong>· Agents biològics:</strong> virus, bacteris, protozous, fongs i cucs.
+          </td>
+          <td>
+            Exposició al soroll, a vibracions, a radiacions i a substàncies químiques i agents químics; estrès tèrmic i contactes tèrmics.
+          </td>
+          <td>Malalties professionals.</td>
+        </tr>
+        <tr>
+          <td><strong>Càrrega de treball</strong></td>
+          <td style="text-align: left;">
+            <strong>· Càrrega física:</strong>
+          </td>
+        </tr>
+      </table>
+      
 
     </div>
 
@@ -93,7 +183,7 @@
       <div id="El marc normatiu de la prevencio de riscos laborals" class="section">
         <p>La Llei de <strong>prevenció de riscos laborals</strong> estableix els conceptes bàsics sobre prevenció de riscos laborals, determina les obligacions de les empreses i els drets de qui hi presta els seus serveis. És la base de tota la legislació existent a Espanya sobre la seguretat i la salut de les persones treballadores</p>
       </div>
-      <img id="foto" src="/media/Fig1.5.png" alt="Fig. 1.1: Relació entre treball i salut."/>
+      <img style="padding-left:4ch; padding-right:4ch; width:1080px;" id="foto" src="../media/Fig1.5.png" alt="Fig. 1.1: Relació entre treball i salut."/>
       <h3>2.1 Drets i obligacions per part de l'empresari i els treballadors</h3>
       <div id="Drets i obligacions per part de l'empresari i els treballadors" class="section">
         <table>
@@ -102,9 +192,59 @@
             <td>- Vetllar per la seva pròpia seguretat i la salut en el treball, i també per la de les persones a qui pugui afectar la seva activitat. <br> <br> - Utilitzar de manera adequada màquines, aparells, eines, substàncies perilloses, etc., necessaries per desenvolupar la seva activitat. <br>  <br> - Utilitzar correctament els dispositius de seguretat, no desactivar-los, i fer servir de manera correcta els mitjans i els equips de protecció facilitats per l'empresa. <br>  <br> -Informar els seus superiors i les persones encarregades de la prevenció detecten un risc per a la seguretat i la salut de les persones treballadores. <br>  <br> - Cooperar amb l'empresa per a garantir unes condicions de treball segures.</td>
           </tr>
         </table>
-        <h3>2.2 Les obligacions i els drets de les persones treballadores relaciondales amb la prevenció de riscos laborals</h3>
-        <div id="Les obligacions i els drets de les persones treballadores relaciondales amb la prevenció de riscos laborals" class="section">
-          <p>Garantir el dret a una protecció eficaç en materia de seguretat i salut de les persones treballadores és obligació principal de l'empresa. Per això, ha d'adoptar totes les mesures que calgui, assumint els costos que suposin i complint la normativa sobre prevenció de riscos laborals </p>
+        <h3>2.3 Les responsabilitats en matèria de prevenció de riscos laborals</h3>
+        <div id="Les responsabilitats en matèria de prevenció de riscos laborals" class="section">
+          <p></p>
+          <table border="1">
+            <tr>
+              <th>Responsable</th>
+              <th>Responsabilitat</th>
+              <th>Sancions i indemnitzacions</th>
+              <th>Exemple</th>
+            </tr>
+            <tr>
+              <td rowspan="4"><strong>Empresa</strong></td>
+              <td> Administrativa. Quan es produeix un incompliment de la normativa sobre prevenció de riscos laborals.</td>
+              <td>
+                <ul>
+                  <li>Sanció econòmica.</li>
+                  <li>Suspensió temporal de l’activitat.</li>
+                  <li>Paralització dels treballs.</li>
+                  <li>Tancament del centre de treball.</li>
+                </ul>
+              </td>
+              <td>Sanció econòmica a una empresa per no informar els treballadors sobre els riscos.</td>
+            </tr>
+            <tr>
+              <td>Recàrrec en les prestacions de la Seguretat Social. Quan es produeix un accident de treball o malaltia professional per manca de mesures preventives.</td>
+              <td>Recàrrec del 30% al 50% en les prestacions, a càrrec de l'empresa.</td>
+              <td>Recàrrec del 40% de la prestació per incapacitat permanent a càrrec de l’empresa.</td>
+            </tr>
+            <tr>
+              <td> Civil. Quan es produeix un dany causat per negligència en prevenció de riscos laborals.</td>
+              <td>Indemnització pels danys físics o morals.</td>
+              <td>Indemnització de 40.000 € a una persona treballadora.</td>
+            </tr>
+            <tr>
+              <td>Penal. Quan es posa en perill greu la vida o salut dels treballadors.</td>
+              <td>
+                <ul>
+                  <li>Privació de llibertat.</li>
+                  <li>Multa econòmica.</li>
+                  <li>Inhabilitació per exercir determinats càrrecs.</li>
+                </ul>
+              </td>
+              <td>Sentència que condemna a vuit mesos de presó a un empresari.</td>
+            </tr>
+            <tr>
+              <td><strong>Persona treballadora</strong></td>
+              <td> Disciplinària. Com a consequencia de l'incompliment de les seves obligacions sobre prevenció de riscos laborals per part de la persona treballadora.</td>
+              <td>S'aplicarà la sanció, segons el règim disciplinari de l'empresa, en funció de la gravetat de la infracció.</td>
+              <td>Dues persones treballadores d'una empresa de seguretat van ser acomiadades per motius disciplinaris per no utilitzar cascos de seguretat</td>
+            </tr>
+
+                    </table>
+          
         </div>
         
       </div>
@@ -162,16 +302,99 @@
       </p>
       </div>
       <div id="Danys derivats del treball" class="section"></div>
-      <h3>3.2.Malalties profesionals</h3>
+      <h3>3.2.Malalties professionals</h3>
       <p>
-        <!-- Esquema diapo 12 -->
-        <img id="foto" src="" alt="Fig. 1.1: Relació entre treball i salut."/>
-
-      </p>
+        La llei general de la Seguretat Social defineix la <strong>malaltia professional</strong> com la contreta a conseqüencia del treball executat 
+        per compte d'altri en les activitats que s'especifiquen el el quadre que s'aprovi per disposicions d'aplicacions i desenvolupament d'aquesta llei
+      </p>     
+      <div id="imagenesalex">
+        <img  src="/media/Fig1.7.png" alt="Fig. 1.1: Relació entre treball i salut." style= padding:6ch; />
+        <h4>Altres patologies</h4>
+        <p>
+          A més dels accidents laborals i les malalties professionals, el treball pot provocar altres patologies
+        </p>
+        <img src="/media/Fig1.8.png" alt="Fig. 1.1: Relació entre treball i salut." style= padding:8ch; />
+      </div>
     </div>
+    
 
       </div>
     </div>
-  <h2><br><br></h2>
+  <div class="container">
+    <h2>4. Les tècniques de protecció i prevenció</h2>
+    <div id="Tecniques de proteccio i prevencio" class="section">
+      <p>
+        Les empreses adopten certes mesures per a poder garantir la seguretat dels treballadors. Aquestes mesures serveixen per <strong>eliminar els riscos</strong>,
+         i poden ser de dos tipus: de protecció i de prevenció.
+      </p>
+    </div>
+    <div id="Tecniques de prevencio" class="section">
+     <h3>4.1 Les tècniques de prevenció</h3> 
+      <p>Les tècniques de prevenció de riscos eliminen tots els elements que poden suposar riscos, i poden ser de dos tipus:</p>
+      <p>
+        <strong>Mesures de prevenció de tipus material, </strong>que serveixen per evitar danys causats pel propi treball i evitan riscs de lesió, consistint en mesures i tècniques de prevenció.
+        <br>
+        <br>
+        <strong>Mesures de prevenció d'informació i formació, </strong>que consisteixen en informar als treballadors dels riscos al seu treball i les mesures que poden adoptar per poder
+        protegir-se d'aquests.
+      </p>
+    <h2><strong>Tècniques o disciplines preventives</strong></h2>
+    <table>
+      <tr>
+      <td><strong>Tècnica</strong></td>
+      <td><strong>Finalitat</strong></td>
+      <td><strong>Mesures</strong></td>
+      </tr>
+      <tr>
+      <td><strong>Seguretat en el treball</strong></td>
+      <td>Evitar accidents laborals.</td>
+      <td>Actua en equips de treball i mesures de l'entorn, com les superfícies dels locals, sostres i parets, escales o altres elements.</td>
+      </tr>
+      <tr>
+      <td><strong>Higiène industrial</strong></td>
+      <td>Prevenir l'aparició de malalties del treball.</td>
+      <td>Serveix per detectar i controla els llocs de concentració de riscos biològics, com virus, bacteris, sorolls, llums, humitat i químics del lloc de treball.</td>
+      </tr>
+      <tr>
+      <td><strong>Ergonomia</strong></td>
+      <td>Adaptar el treball, física i psicològicament al treballador per evitar la fatiga.</td>
+      <td>Analitza i dissenya tots els processos, eines i llocs de treball per poder adaptar-les a les persones treballadores.</td>
+      </tr>
+      <tr>
+      <td><strong>Psicosociologia</strong></td>
+      <td>Prevenir danys psicològics de la persona treballadora que pugui causar la seva feina.</td>
+      <td>Estudia i adapta la organització del treball .</td>
+      </tr>                     
+      <tr>
+      <td><strong>Medicina del treball</strong></td>
+      <td>Mantenir en bon estat la salut dels treballadors.</td>
+      <td>La medicina del treball vigila la salut de les persones treballadores, i es dedica a tractar i curar malalties professionals i a rehabilitar després d'accidents laborals.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </td>
+      </tr>
+      </table>
+    </div>
+    <div id="Tecniques de proteccio" class="section">
+      <h3>4.2 Les tècniques de protecció</h3>
+      <p>Les <strong>tècniques de protecció</strong> són mesures per protegir als treballadors, eliminant o reduïnt els riscos i, així, els possibles danys i/o malalties. Sempre s'han d' adoptar després de les de prevenció.</p>
+      <p>Les <strong>tècniques de protecció col·lectiva</strong> protegeixen a diverses persones a la mateixa vegada i s'han d'anteposar a les individuals. Poden ser mesures de protecció incorporades als llocs de treball o als equips o mitjans de treball.</p>
+      <p>Són exemples de protecció col·lectiva sobre els llocs de treball <strong>les xarxes, ventilacions o baranes</strong> i de protecció col·lectiva sobre els mitjans de treball <strong>els resguards, dispositius de prevenció i els interruptors diferencials.</strong></p>
+    </div>
+    <div id="imagenesproteccion">
+
+      <img src="" alt="">
+    </div>
+  </div>
+
+
+  
+  <div class="container">
+    <h2> 5. La senyalització dels riscos laborals</h2>
+    <p>
+      La senyalització de seguretat comunica indicacions o obligacions per protegir la seguretat i la salut laboral mitjançant panells, colors o contrastos visuals.
+      <br>
+      <br>
+      Els senyals es classifiquen atenent el llenguatge i el mitjà de comunicació utilitzat.
+      <img style="padding-left:4ch; padding-right:4ch; width:1080px;" id="foto" src="/media/Fig1.9.png" />
+    </p>  
+  </div>
 </body>
 </html>
