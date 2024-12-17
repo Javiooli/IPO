@@ -352,3 +352,7 @@ footer {
   max-width: 100%;
 }
 
+.imagenesproteccion {
+  flex: content;
+  display: flex;
+}
