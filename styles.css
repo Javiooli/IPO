@@ -12,6 +12,7 @@
   --navbarfondo: rgba(0, 0, 0, 0.815);
   --navbartexto: white;
   --navbarhover: #5ce1e6;
+  --tableheader: rgba(22, 196, 219, 0.25);
 }
 body {
   background-color: var(--background);
@@ -281,9 +282,11 @@ nav .fa-caret-down {
 }
 
 .section .enunciat {
-  background-color: rgba(22, 196, 219, 0.2);
-  border-radius: 20px;
-  padding:1ch;
+  background: #ecf0f1;
+  padding: 10px;
+  border-left: 4px solid #3498db;
+  margin: 15px 0;
+  border-radius: 4px;
 }
 
 .carousel {
@@ -322,7 +325,7 @@ nav .fa-caret-down {
 }
 
 table {
-  border: 2px solid;
+  border: 3px solid;
   border-color: black;
   border-collapse: collapse;
   text-align: center;
@@ -333,6 +336,13 @@ td {
   border-color: black;
   border-collapse: collapse;
   padding: 10px;
+}
+
+th {
+  border: 3px solid;
+  border-color: black;
+  border-collapse: collapse;
+  background-color: var(--tableheader);
 }
 
 footer {
