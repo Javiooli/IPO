@@ -6,6 +6,202 @@
     <title>IPO: RA2.3</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" type="image/x-icon" href="../media/logo.png">
+    <style>
+      .contenedor {
+        max-width: 1200px;
+        margin: 40px auto;
+        font-family: 'Roboto', sans-serif;
+        padding: 20px;
+      }
+    
+      .nivel1 {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+    
+      .item-principal {
+        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+        border: 2px solid #1e3a8a;
+        padding: 20px;
+        border-radius: 15px;
+        width: 48%;
+        position: relative;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+    
+      .item-principal:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+      }
+    
+      .titulo-principal {
+        margin: 0 0 10px 0;
+        color: #1e3a8a;
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+    
+      .texto-principal {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #374151;
+      }
+    
+      .nivel2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+    
+      .subitem {
+        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+        border: 1px solid #3b82f6;
+        padding: 15px;
+        border-radius: 10px;
+        width: 220px;
+        position: relative;
+        text-align: center;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+    
+      .subitem:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+      }
+    
+      .titulo-subitem {
+        margin: 0 0 8px 0;
+        color: #1e40af;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+    
+      .texto-subitem {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.4;
+        color: #1f2937;
+      }
+    
+      .subitem::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 20px;
+        background: #3b82f6;
+      }
+    
+      .conector {
+        position: absolute;
+        background: #3b82f6;
+      }
+    
+      .tabla {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+    
+      th {
+        background: linear-gradient(135deg, #93c5fd, #60a5fa);
+        color: #ffffff;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+    
+      td {
+        background: #e3f2fd;
+        color: #1e3a8a;
+        font-size: 1em;
+      }
+    
+      tr:nth-child(even) td {
+        background: #dbeafe;
+      }
+    
+      tr:hover td {
+        background: #bfdbfe;
+        transition: 0.3s ease;
+      }
+    
+      .contenedor-tareas {
+        max-width: 1000px;
+        margin: 40px auto;
+        font-family: 'Roboto', sans-serif;
+        padding: 20px;
+      }
+    
+      .tabla-tareas {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+    
+      th {
+        background: linear-gradient(135deg, #93c5fd, #60a5fa);
+        color: #ffffff;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-align: center;
+      }
+    
+      td {
+        background: #e3f2fd;
+        color: #1e3a8a;
+        font-size: 1em;
+      }
+    
+      tr:nth-child(even) td {
+        background: #dbeafe;
+      }
+    
+      tr:hover td {
+        background: #bfdbfe;
+        transition: 0.3s ease;
+      }
+    
+      .categoria-tarea {
+        font-weight: bold;
+        background: #1e3a8a;
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.2em;
+      }
+    
+      ul {
+        padding-left: 20px;
+      }
+    </style>
 </head>
 <body class="intro">
   <nav id="navbar"></nav>
@@ -68,14 +264,265 @@
     </table>
 
     <div class="section" id="vibracions">
-      <h3>Les vibracions </h3>
-      <p class="enunciat">Les vibracions produeixen una energia que és absorbida pel cos i que pot provocar-hi efectes negatius</p>
-      <strong>Riscos:</strong>
+      <h3>1.2 Les vibracions </h3>
+      <p class="enunciat">Les vibracions son generades per moviments oscil·latoris que produeixen una energia que és absorbida pel cos i que pot provocar-hi efectes negatius</p>
+      <br>
+      <p><strong>Riscos:</strong></p>
+      <br>
       <ul>
         <li>Alteracions en l'equilibri amb marejos i vòmits</li>
         <li>Problemes en la comuna vertebral, els ossos o les articulacions i en l'aparell digestiu</li>
       </ul>
-    <div class="section" id="ambient">
+      <img src="../media/RA2/Unitat3/Fig3.3.png" style="width:90ch;"/>
+      
+      <div class="contenedor">
+        <div class="nivel1">
+            <div class="item-principal">
+                <h3 class="titulo-principal">1. Eliminació de les vibracions en l'origen</h3>
+                <p class="texto-principal">Amb mitjans i mètodes que evitin l'exposició, com l'automatització, la robotització, etc.</p>
+            </div>
+            
+            <div class="item-principal">
+                <h3 class="titulo-principal">2. Reducció de les vibracions al nivell més baix possible</h3>
+                <div class="nivel2">
+                    <div class="subitem">
+                        <h3 class="titulo-subitem">A. Mesures tècniques sobre l'origen</h3>
+                        <p class="texto-subitem">Selecció d'equips adequats que generin el nivell més baix de vibració possible i garanteixin el bon manteniment dels equips.</p>
+                    </div>
+                    
+                    <div class="subitem">
+                        <h3 class="titulo-subitem">B. Mesures tècniques en el medi</h3>
+                        <p class="texto-subitem">Ús d'aliants i sistemes d'amortiment.</p>
+                    </div>
+                    
+                    <div class="subitem">
+                        <h3 class="titulo-subitem">C. Mesures organitzatives</h3>
+                        <p class="texto-subitem">Reducció del temps d'exposició, establiment de la rotació de tasques i períodes de descans.</p>
+                    </div>
+                    
+                    <div class="subitem">
+                        <h3 class="titulo-subitem">D. Mesures sobre la persona treballadora</h3>
+                        <p class="texto-subitem">Adequació de les tasques a les característiques individuals, formació, subministrament d'equips de protecció individual i vigilància de la salut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      
+        <h3>1.3 L'ambient tèrmic</h3>
+
+        <p class="enunciat">
+          L'ambient tèrmic en un lloc de treball és el conjunt de variables termohigromètriques(temperatura, humitat, relativa, velocitat de l'aire...)que juntament amb l'esforç físic que suposa la tasca poden afectar a la seguretat i la salut del treballador
+        </p>
+
+        <div class="contenedor">
+          <table class="tabla">
+              <thead>
+                  <tr>
+                      <th>Tipus de treball</th>
+                      <th>Temperatura</th>
+                      <th>Humitat relativa</th>
+                      <th>Velocitat de l'aire (Ambients no calorosos)</th>
+                      <th>Velocitat de l'aire (Ambients calorosos)</th>
+                      <th>Velocitat de l'aire (Ambients amb aire condicionat)</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Sedentari (oficines i similars)</td>
+                      <td>17-27 ºC</td>
+                      <td>30-70 %. En locals amb risc d'electricitat estàtica: mínim 50 %.</td>
+                      <td>0,25 m/s</td>
+                      <td>0,5 m/s</td>
+                      <td>0,25 m/s</td>
+                  </tr>
+                  <tr>
+                      <td>Lleuger (no sedentari)</td>
+                      <td>14-25 ºC</td>
+                      <td>30-70 %</td>
+                      <td>0,25 m/s</td>
+                      <td>0,75 m/s</td>
+                      <td>0,35 m/s</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <div class="contenedor-tareas">
+          <table class="tabla-tareas">
+              <tbody>
+                  <tr>
+                      <td class="categoria-tarea" colspan="2">Estrès tèrmic per calor</td>
+                  </tr>
+                  <tr>
+                      <th>Què és?</th>
+                      <td>Un augment brusc i sostingut de la temperatura del cos humà que no es pot eliminar.</td>
+                  </tr>
+                  <tr>
+                      <th>Quins són els seus efectes?</th>
+                      <td>
+                          <ul>
+                              <li>Augment de la temperatura corporal.</li>
+                              <li>Cop de calor (a partir de 40 ºC de temperatura corporal).</li>
+                              <li>Deshidratació, lipotímia i dèficit salí, increment del ritme respiratori, vasodilatació, etc.</li>
+                          </ul>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>En quines activitats?</th>
+                      <td>Es pot produir en l’exposició a altes temperatures: alts forns, metal·lúrgia, cuines, tintoreries, bugaderies, fleques, treballs de soldadura, treball a l’exterior a l’estiu, etc.</td>
+                  </tr>
+                  <tr>
+                      <th>Com es pot prevenir?</th>
+                      <td>
+                          <ul>
+                              <li>Evitant canvis bruscos de temperatura.</li>
+                              <li>Limitant el temps de treball i evitant les hores de més calor.</li>
+                              <li>Utilitzant roba de treball adequada.</li>
+                              <li>Bevent aigua sovint.</li>
+                              <li>Mantenint la pell neta per a facilitar la transpiració.</li>
+                          </ul>
+                      </td>
+                  </tr>
+        
+                  <tr>
+                      <td class="categoria-tarea" colspan="2">Estrès tèrmic per fred</td>
+                  </tr>
+                  <tr>
+                      <th>Què és?</th>
+                      <td>Pèrdua de calor excessiva que es produeix en el cos.</td>
+                  </tr>
+                  <tr>
+                      <th>Quins són els seus efectes?</th>
+                      <td>
+                          <ul>
+                              <li>Hipotèrmia.</li>
+                              <li>Contraccions musculars.</li>
+                              <li>Torpor manual.</li>
+                              <li>Congelació en diferents graus.</li>
+                          </ul>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>En quines activitats?</th>
+                      <td>Es pot produir en l’exposició a baixes temperatures: cambres frigorífiques, indústria alimentària (congelats, carn i peix), treballs a l’exterior a l’hivern, etc.</td>
+                  </tr>
+                  <tr>
+                      <th>Com es pot prevenir?</th>
+                      <td>
+                          <ul>
+                              <li>Limitant el temps de treball.</li>
+                              <li>Utilitzant roba de treball adequada.</li>
+                              <li>Establint pauses en el temps de treball i disposant de locals adequats per a aquestes.</li>
+                          </ul>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+
+        <h3>1.4 Les radiacions</h3>
+    <p class="enunciat">Les <strong>radiacions</strong> constitueixen la propagació d’energia en forma d’ones de magnitud física que reflecteix la quantitat de calor que rep el cos humà.</p>
+
+    <table>
+        <tr>
+            <th colspan="2">Classificació de les radiacions</th>
+        </tr>
+        <tr>
+            <td><strong>Radiacions ionitzants</strong></td>
+            <td>Provoquen alteracions greus en les cèl·lules del cos (raigs X, alfa, beta i gamma).</td>
+        </tr>
+        <tr>
+            <td><strong>Radiacions no ionitzants</strong></td>
+            <td>No provoquen alteracions greus en les cèl·lules del cos (infrarojos, ultraviolets, microones i làser).</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Riscos de les radiacions</th>
+            <th>Mesures preventives</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Vòmits, diarrees i hemorràgies</li>
+                    <li>Cremades, lesions oculars, càncer o la mort</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Utilitzar equips de protecció individual adequats</li>
+                    <li>Reduir el temps d’exposició</li>
+                    <li>Formació i senyalització adequades</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Secció de Il·luminació -->
+    <h3>1.5 La il·luminació</h3>
+    <p class="enunciat">La il·luminació és la magnitud física que reflecteix la quantitat de llum que rep el cos humà. Suposa un risc per a la salut, tant per excés com per defecte.</p>
+
+    <table>
+        <tr>
+            <th>Riscos de la il·luminació</th>
+            <th>Mesures preventives</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Cansament i fatiga visual</li>
+                    <li>Marejos i mal de cap</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Fer ús d’una quantitat de llum adequada (preferiblement natural)</li>
+                    <li>Adaptar la intensitat de la llum a l’activitat</li>
+                    <li>Evitar fonts de llum enlluernadores</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    
+    <h3>B. Els agents químics</h3>
+    <p>Els agents químics són molt utilitzats en les indústries i poden ser tòxics per a les persones treballadores.</p>
+
+    <table>
+        <tr>
+            <th>Formes dels agents químics</th>
+        </tr>
+        <tr>
+            <td>Matèries en forma de pols, fibres, gas, vapor o aerosols presents en l’aire del lloc de treball.</td>
+        </tr>
+    </table>
+
+    <h4>Vies d’entrada dels agents químics en l’organisme:</h4>
+    <ul>
+        <li>Via respiratòria (nas i boca)</li>
+        <li>Via ocular (ulls)</li>
+        <li>Via digestiva (boca)</li>
+        <li>Via parenteral (ferides o llagues)</li>
+        <li>Via dèrmica (pell)</li>
+    </ul>
+    
+    <p class="enunciat"> Els agents químics han de disposar d'una etiqueta de seguretat, aquesta etiqueta ha de disposar de la següent informació </p>
+    <img src="../media/RA2/Unitat3/Fig3.5.jpg" style="width:90ch;"/>
+
+
+
+
+
+
+
+    <h2>3. Els riscos biològics en el treball</h2>
+    <p> L'exposició a riscos biològics es dona tant en la nostra vida personal com en el nostre món laboral. Aquests agents biològics, que són éssers vius, poden causar malalties a les persones. Normalment són lleus, però també poden arribar a ser molt greus.</p>
+    <div class="section">
+      <p class="enunciat">El risc biològic és la possiblitat de patir qualsevol tipus d'infecció, al·lèrgia o intoxicació derivada de l'exposició o el contacte amb agents biològics en el desenvolupament d'una activitat laboral.</p>
     </div>
     </div>
   </div>
